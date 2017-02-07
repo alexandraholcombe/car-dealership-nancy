@@ -20,7 +20,6 @@ namespace CarDealership.Objects
     {
       return _allCars;
     }
-
     public string GetMakeModel()
     {
       return _makeModel;
@@ -29,7 +28,7 @@ namespace CarDealership.Objects
     {
       _makeModel = inputMakeModel;
     }
-    public string GetPrice()
+    public int GetPrice()
     {
       return _price;
     }
@@ -37,7 +36,7 @@ namespace CarDealership.Objects
     {
       _price = inputPrice;
     }
-    public string GetMiles()
+    public int GetMiles()
     {
       return _miles;
     }
@@ -45,15 +44,9 @@ namespace CarDealership.Objects
     {
       _miles = inputMiles;
     }
-    Car InputCar = new Car(string inputMakeModel, int inputPrice, int inputMiles)
-    {
-      makeModel = string inputMakeModel;
-      price = int inputPrice;
-      miles = int inputMiles;
-    }
     public void SaveCars()
     {
-      _allCars.Add(Car());
+      _allCars.Add(_makeModel, _price, _miles);
     }
   }
 }
