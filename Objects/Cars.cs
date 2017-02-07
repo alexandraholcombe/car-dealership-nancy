@@ -8,7 +8,7 @@ namespace CarDealership.Objects
     private string _makeModel;
     private int _price;
     private int _miles;
-    private static List<Car> _allCars = new List<Car>(){};
+    private static List<Car> _allCars = new List<Car>{};
 
     public Car (string makeModel, int price, int miles)
     {
@@ -44,9 +44,9 @@ namespace CarDealership.Objects
     {
       _miles = inputMiles;
     }
-    public void SaveCars()
+    public void SaveCar()
     {
-      _allCars.Add(_makeModel, _price, _miles);
+      _allCars.Add(this);
     }
   }
 }
