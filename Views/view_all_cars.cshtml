@@ -1,0 +1,11 @@
+<h1>All Cars For Sale</h1>
+<ul>
+  @foreach (var car in Model)
+  {
+    <li>@car.GetMakeModel(), @car.GetMiles(), @car.GetPrice()</li>
+  }
+</ul>
+<p><a href="/">Go sell another one for less than what it's worth!</a></p>
+<form action="/car_cleared" method="post">
+  <button type="submit" name="button">Bankrupt us!</button>
+</form>
