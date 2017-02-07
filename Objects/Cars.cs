@@ -33,7 +33,7 @@ namespace CarDealership.Objects
     {
       return _price;
     }
-    public void SetPrice(string inputPrice)
+    public void SetPrice(int inputPrice)
     {
       _price = inputPrice;
     }
@@ -41,9 +41,15 @@ namespace CarDealership.Objects
     {
       return _miles;
     }
-    public void SetMiles(string inputMiles)
+    public void SetMiles(int inputMiles)
     {
       _miles = inputMiles;
+    }
+    Car InputCar = new Car(string inputMakeModel, int inputPrice, int inputMiles)
+    {
+      makeModel = string inputMakeModel;
+      price = int inputPrice;
+      miles = int inputMiles;
     }
     public void SaveCars()
     {
